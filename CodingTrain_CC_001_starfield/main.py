@@ -20,9 +20,9 @@ class Program(Interface):
         self.amount = 800
         self.stars = [Star() for _ in range(self.amount)]
         self.show_frames = True
-        self.translate(width / 2, height / 2)
+
         self.on_mouse_move = lambda x, y: mouse_move(x, y, self.mouse_hovered)
-        self.on_click = lambda x, y: print(x, y)
+        self.translate(width / 2, height / 2)
 
     def draw(self):
         for star in self.stars:
